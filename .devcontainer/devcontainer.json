@@ -1,1 +1,17 @@
-
+{
+  "name": "Motoko Development Container",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:0-focal",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dfinity-foundation.vscode-motoko"
+      ]
+    }
+  },
+  "postCreateCommand": "sh .devcontainer/setup.sh"
+}
